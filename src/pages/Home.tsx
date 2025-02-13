@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      <main className="max-w-6xl mx-auto p-6 mt-10">
+      <main className="max-w-6xl mx-auto md:p-6 md:mt-10 p-0 ">
         <ProductCard />
       </main>
     </div>
