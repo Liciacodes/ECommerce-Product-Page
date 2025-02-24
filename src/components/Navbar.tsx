@@ -25,18 +25,18 @@ export default function Navbar() {
   };
 
   return (
+    
     <nav className="relative flex items-center justify-between py-4 md:py-6 px-8 lg:px-32 border-b-[1px] border-lightGrayishBlue shadow-sm">
-      {/* Left Section: Logo and Navigation */}
+ 
       <div className="flex items-center space-x-8">
         <button className="block md:hidden" onClick={toggleMobileMenu}>
-          <img src="/src/assets/images/icon-menu.svg" alt="Menu" />
+          <img src="/images/icon-menu.svg" alt="Menu" />
         </button>
 
-        {/* Logo */}
+      
         
         <span className="text-2xl md:text-3xl font-bold flex items-center">sneakers</span>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6">
           <ul className="flex space-x-6 text-darkGrayishBlue font-medium items-center">
             {["Collections", "Men", "Women", "About", "Contact"].map((link: string) => (
@@ -59,14 +59,13 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Right Section: Cart and Avatar */}
       <div className="flex items-center space-x-6">
         <button
           className="relative"
           onClick={toggleCart}
           aria-label="Toggle Cart"
         >
-          <img src="/src/assets/images/icon-cart.svg" alt="Cart" className="cursor-pointer" />
+          <img src="/images/icon-cart.svg" alt="Cart" className="cursor-pointer" />
           {items.length > 0 && (
             <span className="absolute -top-3 right-[-6px] font-bold rounded-full bg-orange text-white w-5 h-5 flex items-center justify-center">
               {items.length}
@@ -74,7 +73,7 @@ export default function Navbar() {
           )}
         </button>
         <img
-          src="/src/assets/images/image-avatar.png"
+          src="/images/image-avatar.png"
           alt="User Avatar"
           className="rounded-full w-10 h-10 border border-orange cursor-pointer"
         />
@@ -108,7 +107,7 @@ export default function Navbar() {
         </>
       )}
 
-      {/* Cart Empty State */}
+      
       {isCartOpen && <CartEmptyState />}
     </nav>
   );
