@@ -14,10 +14,10 @@ const ProductCard = () => {
 
 
     const images = [
-        '/src/assets/images/image-product-1.jpg',
-             '/src/assets/images/image-product-2.jpg', 
-             '/src/assets/images/image-product-3.jpg', 
-             '/src/assets/images/image-product-4.jpg']
+        '/images/image-product-1.jpg',
+             '/images/image-product-2.jpg', 
+             '/images/image-product-3.jpg', 
+             '/images/image-product-4.jpg']
     
 
     const handleAddToCart = () => {
@@ -32,11 +32,11 @@ const ProductCard = () => {
 
     return (
         <div className="flex flex-col md:flex-row md:space-y-0 sm:space-x-4 md:space-x-32">
-            {/* Left Image Section */}
+          
             <div className="flex flex-col md:space-y-4 items-center w-full">
                 <img src={images[activeSlide]} alt="Product" className="hidden md:block rounded-lg w-full" />
 
-                {/* Mobile Slider */}
+               
                 <div className='w-full md:hidden'>
                     <Swiper
                         spaceBetween={10}
@@ -58,7 +58,7 @@ const ProductCard = () => {
                     </Swiper>
                 </div>
 
-                {/* Thumbnails for Desktop */}
+               
                 <div className="hidden md:flex  w-full justify-between">
                     {images.map((src, index) => (
                         <img
@@ -67,7 +67,7 @@ const ProductCard = () => {
                             alt={`Thumbnail ${index + 1}`}
                             className={`w-full max-w-[80px] rounded-lg border-2 ${activeSlide === index ? 'border-orange' : 'border-transparent'} cursor-pointer`}
                             onMouseOver={() => {
-                                setActiveSlide(index); // Update active slide
+                                setActiveSlide(index); 
                             }}
                         />
                     ))}
